@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+	background-color: #FFF0AE;
+
+}
+
+.header{
+	background-color: yellow;
+	border: 2px solid black;
+}
+.bo{
+	background-color: white;
+	border: 2px solid black;
+	margin-top: 30px;
+	margin-right: 250px; 
+	margin-left:250px;
+	margin-bottom: 30px;
+}
+
+</style>
+<head>
+
+<title>Car</title>
+</head>
+<body>
+
+<br>
+<div class="header">
+<center>
+
+<h1>Car List</h1>
+</center></div>
+
+<div class = "bo">
+<center>
+<h2><ul>
+{% for car in object_list %}
+    CAR : {{ car.model }} , DETAIL : {{ car.detail }} , PRICE : {{ car.price }}<br>
+{% empty %}
+    <li>No Car.</li>
+{% endfor %}
+</ul></h2>
+</center>
+</div>
+<center>
+
+<button><h1><a href="{% url 'rentcar'%}"> Rent Car </a></h1></button>
+<button><h1><a href="{% url 'returncar'%}"> Return Car </a></h1></button>
+
+</center>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+	background-color: #FFF0AE;
+
+}
+
+.bo{
+	background-color: white;
+	border: 3px solid black;
+	margin-top: 40px;
+	margin-right: 300px;
+	margin-left: 300px; 
+}
+
+.ti{
+	background-color: white;
+	border: 3px solid black;
+	margin-top: 20px;
+	margin-right: 300px;
+	margin-left: 300px; 
+	margin-bottom: 30px; 
+}
+
+
+</style>
+<head>
+<title>RentCar</title>
+</head>
+
+
+<div class="ti">
+<center><h1>Rent Car</h1></center>
+</div>
+
+<body>
+<br>
+<div class="bo">
+<h2><center>
+{% load crispy_forms_tags %}
+{% crispy form %}
+</h2></center>
+</div>
+
+</body>
+
+</html>

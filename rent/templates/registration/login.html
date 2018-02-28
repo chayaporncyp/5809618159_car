@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<style>
+
+body{
+	background-color: #FFF0AE;
+
+}
+
+.header{
+	background-color: yellow;
+	border: black;
+}
+</style>
+
+</head>
+<body>
+
+<div class = "header">
+<center><h1>Hello User</h1></center>
+</div>
+
+
+ <center><h1><form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form></h1>
+</center>
+
+
+ </body>
+ </html>
